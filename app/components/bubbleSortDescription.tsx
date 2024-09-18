@@ -7,17 +7,17 @@ export const bubbleSortDescription = (
     </p>
     <ol className={`list-decimal pl-6 space-y-2 mt-4 text-left`}>
       <li>
-        <strong>{`Start at the beginning:`}</strong>{" "}
+        <strong>{`Start at the beginning:`}</strong>
         {` Look at the first two items
         in the list.`}
       </li>
       <li>
-        <strong>{`Compare:`}</strong>{" "}
+        <strong>{`Compare:`}</strong>
         {` If the first item is greater than the
         second item, swap them.`}
       </li>
       <li>
-        <strong>{`Move to the next pair:`}</strong>{" "}
+        <strong>{`Move to the next pair:`}</strong>
         {` Move one position to the
         right and compare the next two items.`}
       </li>
@@ -28,7 +28,7 @@ export const bubbleSortDescription = (
           the list.`}
       </li>
       <li>
-        <strong>{`Repeat the process:`}</strong>{" "}
+        <strong>{`Repeat the process:`}</strong>
         {` Go back to the start of the list
         and repeat the steps, ignoring the last sorted items (since they are
         already in place).`}

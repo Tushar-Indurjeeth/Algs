@@ -1,4 +1,4 @@
-type BubbleSortStep = {
+type SortStep = {
   description: string;
   data: number[];
   currentPair: [number, number];
@@ -6,7 +6,7 @@ type BubbleSortStep = {
 
 export const bubbleSort = (array: number[]) => {
   const arr = [...array];
-  const steps: BubbleSortStep[] = [];
+  const steps: SortStep[] = [];
 
   for (let i = 0; i < arr.length - 1; i++) {
     for (let j = 0; j < arr.length - 1 - i; j++) {
