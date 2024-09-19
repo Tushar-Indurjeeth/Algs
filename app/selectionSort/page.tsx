@@ -56,7 +56,7 @@ const SelectionSort: React.FC = () => {
           {array.map((value, index) => (
             <div
               key={index}
-              className={`w-6 bg-blue-500 text-white flex items-end justify-center text-sm font-bold ${
+              className={`sm:w-6 bg-blue-500 text-white flex items-end justify-center text-sm font-bold w-full ${
                 comparedIndices.includes(index) ? "bg-red-500" : "bg-blue-500"
               } `}
               style={{ height: `${value * 3}px` }} // Dynamically adjust height

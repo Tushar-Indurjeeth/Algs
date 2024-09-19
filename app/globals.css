@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .mainContainer {
-  @apply flex flex-col lg:flex-row items-center justify-center min-h-screen bg-gray-950 text-gray-100 space-y-8 lg:space-y-0 lg:space-x-8;
+  @apply flex flex-col lg:flex-row items-center justify-center min-h-screen bg-gray-950 text-gray-100 space-y-8 lg:space-y-0 lg:space-x-8 w-screen
 }
 
 .descriptionContainer {
@@ -15,7 +15,7 @@
 }
 
 .visualRepContainer {
-  @apply flex flex-col items-center
+  @apply flex flex-col items-center 
 }
 
 .arrayContainer {
