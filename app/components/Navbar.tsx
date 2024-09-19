@@ -26,15 +26,17 @@ const Navbar: React.FC = () => {
 
       {/* Search box on the right */}
       <div className="flex items-center">
-        <form onSubmit={handleSearch} className="flex items-center relative">
+        <form
+          onSubmit={handleSearch}
+          className="flex items-center relative pl-3 md:pl-0"
+        >
           <input
             type="text"
             placeholder="Search..."
-            className="px-3 py-2 pl-10 text-black rounded-lg outline-none"
+            className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg px-2 md:px-3 py-2 md:pl-10 text-black rounded-lg outline-none"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />
-          {/* Magnifying glass icon inside the input field */}
           <MagnifyingGlassIcon className="h-5 w-5 text-gray-500 absolute right-3 top-2.5" />
           {/* Hidden submit button */}
           <button type="submit" className="hidden">
