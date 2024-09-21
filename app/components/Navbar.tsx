@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from "react";
 import Link from "next/link";
 import { HomeIcon, MagnifyingGlassIcon } from "@heroicons/react/24/outline";
@@ -8,7 +10,7 @@ const Navbar: React.FC = () => {
   const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // Handle search logic here
-    console.log("Search query:", searchQuery);
+    // console.log("Search query:", searchQuery);
   };
 
   return (
