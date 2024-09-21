@@ -18,8 +18,6 @@ const SortingAlg: React.FC<SortingProps> = ({ sortFunction, description }) => {
   const [comparedIndices, setComparedIndices] = useState<number[]>([]);
   const speed = useRecoilValue(speedState);
 
-  const algName = formatFunctionName(sortFunction);
-
   const generateNewArray = () => {
     const newArr = generateArray(10, 100);
     setArray(newArr);
@@ -50,7 +48,7 @@ const SortingAlg: React.FC<SortingProps> = ({ sortFunction, description }) => {
     <div className="mainContainer">
       <div className="descriptionContainer">
         {/* Description Section */}
-        <h1 className="title">{algName}</h1>
+        <h1 className="title">{formatFunctionName(sortFunction)}</h1>
         {description}
       </div>
 
