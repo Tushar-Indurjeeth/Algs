@@ -1,8 +1,4 @@
-type SortStep = {
-  description: string;
-  data: number[];
-  currentPair: [number, number];
-};
+import { SortStep } from "@/types/sortAlgs";
 
 export const bubbleSort = (array: number[]) => {
   const arr = [...array];

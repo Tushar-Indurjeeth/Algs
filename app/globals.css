@@ -2,38 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
-.mainContainer {
-  @apply flex flex-col lg:flex-row items-center justify-center min-h-screen bg-gray-950 text-gray-100 space-y-8 lg:space-y-0 lg:space-x-8 w-screen
-}
+@layer components {
+  .mainContainer {
+    @apply flex flex-col lg:flex-row items-center justify-center min-h-screen bg-gray-950 text-gray-100 space-y-8 lg:space-y-0 lg:space-x-8 w-screen
+  }
 
-.descriptionContainer {
-  @apply max-w-xl mb-8 p-4 bg-gray-800 shadow-lg rounded-lg text-left
-}
+  .descriptionContainer {
+    @apply max-w-xl mb-8 p-4 bg-gray-800 shadow-lg rounded-lg text-left
+  }
 
-.title {
-  @apply text-3xl font-bold mb-4 text-center
-}
+  .title {
+    @apply text-3xl font-bold mb-4 text-center
+  }
 
-.visualRepContainer {
-  @apply flex flex-col items-center 
-}
+  .visualRepContainer {
+    @apply flex flex-col items-center 
+  }
 
-.arrayContainer {
-  @apply flex space-x-2 mb-8
-}
+  .arrayContainer {
+    @apply flex space-x-2 mb-8
+  }
 
-/* .arrayContent {
-  @apply w-6 bg-blue-500 text-white flex items-end justify-center text-sm font-bold
-} */
+  .arrayContent {
+    @apply sm:w-6 bg-blue-500 text-white flex items-end justify-center text-sm font-bold w-full
+  }
 
-.buttonContainer {
-  @apply flex flex-col items-center
-}
+  .buttonContainer {
+    @apply flex flex-col items-center
+  }
 
-.buttonSort {
-  @apply px-6 py-2 text-white font-bold rounded-lg
-}
+  .buttonSort {
+    @apply px-6 py-2 text-white font-bold rounded-lg
+  }
 
-.btnNewArray {
-  @apply mt-4 px-6 py-2 bg-green-500 text-white font-bold rounded-lg hover:bg-green-600
+  .btnNewArray {
+    @apply mt-4 px-6 py-2 bg-green-500 text-white font-bold rounded-lg
+  }
 }
