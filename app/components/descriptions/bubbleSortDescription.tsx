@@ -1,4 +1,6 @@
-export const bubbleSortDescription = (
+export const name = "Bubble Sort";
+
+export const bubbleSortDescription: JSX.Element = (
   <div>
     <p>
       {`Bubble Sort is a simple sorting algorithm that works by repeatedly

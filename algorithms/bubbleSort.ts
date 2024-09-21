@@ -1,8 +1,4 @@
-type SortStep = {
-  description: string;
-  data: number[];
-  currentPair: [number, number];
-};
+import { SortStep } from "@/types/sortAlgs";
 
 export const bubbleSort = (array: number[]) => {
   const arr = [...array];
@@ -14,6 +10,7 @@ export const bubbleSort = (array: number[]) => {
         description: `Comparing ${arr[j]} and ${arr[j + 1]}`,
         data: [...arr],
         currentPair: [j, j + 1],
+        algName: "Bubble Sort",
       });
 
       if (arr[j] > arr[j + 1]) {
@@ -24,6 +21,7 @@ export const bubbleSort = (array: number[]) => {
           description: `Swapped ${arr[j]} and ${arr[j + 1]}`,
           data: [...arr],
           currentPair: [j, j + 1],
+          algName: "Bubble Sort",
         });
       }
     }
@@ -33,6 +31,7 @@ export const bubbleSort = (array: number[]) => {
     description: "Array sorted",
     data: [...arr],
     currentPair: [-1, -1],
+    algName: "Bubble Sort",
   });
 
   return steps;
