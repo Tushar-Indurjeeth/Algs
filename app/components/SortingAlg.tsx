@@ -5,7 +5,8 @@ import SpeedSelector from "./SpeedSelector";
 import { useRecoilValue } from "recoil";
 import { speedState } from "@/state/atoms";
 import { SortStep } from "@/types/sortAlgs";
-import { formatFunctionName } from "@/utils/splitCamelCase";
+import { formatAlgName } from "@/utils/splitCamelCase";
+import { usePathname } from "next/navigation";
 
 interface SortingProps {
   sortFunction: (arr: number[]) => SortStep[];
@@ -17,6 +18,9 @@ const SortingAlg: React.FC<SortingProps> = ({ sortFunction, description }) => {
   const [sorting, setSorting] = useState(false);
   const [comparedIndices, setComparedIndices] = useState<number[]>([]);
   const speed = useRecoilValue(speedState);
+
+  const pathname = usePathname();
+  const algName = pathname.split("/").pop();
 
   const generateNewArray = () => {
     const newArr = generateArray(10, 100);
@@ -48,7 +52,7 @@ const SortingAlg: React.FC<SortingProps> = ({ sortFunction, description }) => {
     <div className="mainContainer">
       <div className="descriptionContainer">
         {/* Description Section */}
-        <h1 className="title">{formatFunctionName(sortFunction)}</h1>
+        <h1 className="title">{formatAlgName(algName as string)}</h1>
         {description}
       </div>
 

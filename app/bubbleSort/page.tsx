@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { bubbleSortDescription } from "../components/bubbleSortDescription";
+import { bubbleSortDescription } from "../components/descriptions/bubbleSortDescription";
 import { bubbleSort } from "@/algorithms/bubbleSort";
 import SortingAlg from "../components/SortingAlg";
 

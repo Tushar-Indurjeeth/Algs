@@ -27,6 +27,7 @@ export const heapSort = (array: number[]) => {
         description: `Swapped ${arr[i]} and ${arr[largest]}`,
         data: [...arr],
         currentPair: [i, largest],
+        algName: "Heap Sort",
       });
 
       // Recursively heapify the affected sub-tree
@@ -64,6 +65,7 @@ export const heapSort = (array: number[]) => {
     description: "Array sorted",
     data: [...arr],
     currentPair: [-1, -1],
+    algName: "Heap Sort",
   });
 
   return steps;

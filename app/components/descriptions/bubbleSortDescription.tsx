@@ -1,3 +1,5 @@
+export const name = "Bubble Sort";
+
 export const bubbleSortDescription: JSX.Element = (
   <div>
     <p>

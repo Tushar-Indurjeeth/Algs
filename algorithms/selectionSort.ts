@@ -12,6 +12,7 @@ export const selectionSort = (array: number[]) => {
         description: `Comparing ${arr[min]} and ${arr[j]}`,
         data: [...arr],
         currentPair: [min, j],
+        algName: "Selection Sort",
       });
 
       if (arr[j] < arr[min]) {
@@ -28,6 +29,7 @@ export const selectionSort = (array: number[]) => {
       description: `Swapped ${arr[min]} and ${arr[i]}`,
       data: [...arr],
       currentPair: [i, min],
+      algName: "Selection Sort",
     });
   }
 
@@ -35,7 +37,10 @@ export const selectionSort = (array: number[]) => {
     description: "Array sorted",
     data: [...arr],
     currentPair: [-1, -1],
+    algName: "Selection Sort",
   });
 
   return steps;
 };
+
+selectionSort.displayName = "Selection Sort";
