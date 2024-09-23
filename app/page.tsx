@@ -1,28 +1,9 @@
-import fs from "fs";
-import path from "path";
 import Link from "next/link";
 import { splitCamelCase } from "@/utils/splitCamelCase";
+import { getPages } from "@/utils/getPages";
 
 const HomePage = () => {
-  // Path to the app directory
-  const appDirectory = path.join(process.cwd(), "app");
-
-  // Get all files and directories in the app directory
-  const files = fs.readdirSync(appDirectory);
-
-  // Filter out unwanted files
-  const pages = files
-    .filter((file) => {
-      return (
-        !file.startsWith("components") &&
-        !file.startsWith("favicon") &&
-        !file.startsWith("fonts") &&
-        !file.startsWith("globals") &&
-        !file.startsWith("layout") &&
-        file !== "page.tsx"
-      );
-    })
-    .map((file) => file.replace(".tsx", "")); // Remove file extensions
+  const pages = getPages();
 
   return (
     <div className="min-h-screen bg-gray-100 dark:bg-gray-950 text-gray-900 dark:text-gray-100 p-8 space-y-8">

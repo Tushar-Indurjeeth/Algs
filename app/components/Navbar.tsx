@@ -3,14 +3,20 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { HomeIcon, MagnifyingGlassIcon } from "@heroicons/react/24/outline";
+import { allAlgs } from "@/utils/allAlgs";
+import Modal from "./Modal";
 
 const Navbar: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState("");
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    // Handle search logic here
-    // console.log("Search query:", searchQuery);
+  const pages = allAlgs; // Array of pages
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
   };
 
   return (
@@ -26,26 +32,24 @@ const Navbar: React.FC = () => {
         </Link>
       </div>
 
-      {/* Search box on the right */}
+      {/* Search icon on the right to open modal */}
       <div className="flex items-center">
-        <form
-          onSubmit={handleSearch}
+        <button
+          onClick={openModal}
           className="flex items-center relative pl-3 md:pl-0"
         >
           <input
             type="text"
             placeholder="Search..."
-            className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg px-2 md:px-3 py-2 md:pl-10 text-black rounded-lg outline-none"
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
+            readOnly
+            className="bg-gray-900 w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg px-2 md:px-3 py-2 md:pl-10  rounded-lg outline-none"
           />
-          <MagnifyingGlassIcon className="h-5 w-5 text-gray-500 absolute right-3 top-2.5" />
-          {/* Hidden submit button */}
-          <button type="submit" className="hidden">
-            Search
-          </button>
-        </form>
+          <MagnifyingGlassIcon className="h-5 w-5  absolute right-3 top-2.5" />
+        </button>
       </div>
+
+      {/* Modal with internal search bar */}
+      <Modal isOpen={isModalOpen} onClose={closeModal} pages={pages} />
     </nav>
   );
 };
