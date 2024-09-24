@@ -56,7 +56,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, pages }) => {
     <div className="fixed inset-0 z-50 bg-black bg-opacity-80 flex justify-center items-start pt-10">
       <div
         ref={modalRef}
-        className="bg-gray-800 text-gray-100 w-full max-w-2xl p-6 rounded-lg shadow-lg relative"
+        className="bg-black text-white w-full max-w-2xl p-6 rounded-lg shadow-lg relative"
       >
         {/* Close button */}
         <button
@@ -68,11 +68,11 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, pages }) => {
 
         {/* Search Bar inside Modal */}
         <div className="relative mt-6">
-          <MagnifyingGlassIcon className="h-5 w-5 text-gray-400 absolute left-4 top-1/2 transform -translate-y-1/2 pointer-events-none" />
+          <MagnifyingGlassIcon className="h-5 w-5 text-white absolute left-4 top-1/2 transform -translate-y-1/2 pointer-events-none" />
           <input
             type="text"
             placeholder="Search..."
-            className="w-full pl-12 pr-4 py-2 rounded-lg bg-gray-700 border border-gray-600 transition-all shadow-sm outline-none text-sm text-gray-100 placeholder-gray-400"
+            className="w-full pl-12 pr-4 py-2 rounded-lg bg-black border-b-2 border-gray-9700 transition-all shadow-sm outline-none text-sm text-white placeholder-gray-400"
             ref={searchInputRef}
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
@@ -87,7 +87,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, pages }) => {
                 <li key={page} className="py-2 border-b border-gray-600">
                   <a
                     href={page}
-                    className="block px-2 hover:bg-gray-700 rounded-lg"
+                    className="block px-2 hover:bg-gray-800 rounded-md"
                   >
                     {splitCamelCase(page)}
                   </a>
